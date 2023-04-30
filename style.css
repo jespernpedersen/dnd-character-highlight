@@ -107,9 +107,19 @@ video {
     text-shadow: 1px 1px 1px #000;
 }
 
+.druid {
+  color: #5f7e4f;
+  text-shadow: 1px 1px 1px #000;
+}
+
 .cleric {
     color: #f5be2c;
     text-shadow: 1px 1px 1px #000;
+}
+
+.barbarian {
+  color: #f5802c;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .magic-items {
