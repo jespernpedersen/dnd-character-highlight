@@ -18,7 +18,7 @@
         <div id="carousel">
             <div class="item item-1 active">
                 <div class="character-background">
-                    <video loop autoplay muted>
+                    <video autoplay muted>
                         <source src="video-background/lesthea.mp4">
                     </video>
                 </div>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="character-content">
                             <h1>Lesthea Roseshade</h1>
-                            <h2>Level 1 Elf <span class="ranger">Ranger</span></h2>
+                            <h2>Level 1 Wood Elf <span class="ranger">Ranger</span></h2>
                             <div class="character-stats">
                                 <div class="stat">
                                     <span class="label">Strength</span>
@@ -79,7 +79,7 @@
             </div>
             <div class="item item-2">
                 <div class="character-background">
-                    <video loop autoplay muted>
+                    <video muted>
                         <source src="video-background/durkon.mp4">
                     </video>
                 </div>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="character-content">
                             <h1>Durkon Bronzebeard</h1>
-                            <h2>Level 1 Dwarf <span class="cleric">Cleric</span></h2>
+                            <h2>Level 1 Mountain Dwarf <span class="cleric">Cleric</span></h2>
                             <div class="character-stats">
                                 <div class="stat">
                                     <span class="label">Strength</span>
@@ -140,7 +140,7 @@
             </div>  
             <div class="item item-3">
                 <div class="character-background">
-                    <video loop autoplay muted>
+                    <video muted>
                         <source src="video-background/frak.mp4">
                     </video>
                 </div>
@@ -151,7 +151,7 @@
                         </div>
                         <div class="character-content">
                             <h1>Frak Stonecutter</h1>
-                            <h2>Level 1 Dwarf <span class="barbarian">Barbarian</span></h2>
+                            <h2>Level 1 Mountain Dwarf <span class="barbarian">Barbarian</span></h2>
                             <div class="character-stats">
                                 <div class="stat">
                                     <span class="label">Strength</span>
@@ -201,7 +201,7 @@
             </div>
             <div class="item item-4">
                 <div class="character-background">
-                    <video loop autoplay muted>
+                    <video muted>
                         <source src="video-background/bridget.mp4">
                     </video>
                 </div>
@@ -212,7 +212,7 @@
                         </div>
                         <div class="character-content">
                             <h1>Bridget of the Wilds</h1>
-                            <h2>Level 1 Human <span class="ranger">Ranger</span></h2>
+                            <h2>Level 1 Wood Half-Elf <span class="ranger">Ranger</span></h2>
                             <div class="character-stats">
                                 <div class="stat">
                                     <span class="label">Strength</span>
@@ -262,7 +262,7 @@
             </div>
             <div class="item item-5">
                 <div class="character-background">
-                    <video loop autoplay muted>
+                    <video muted>
                         <source src="video-background/oli.mp4">
                     </video>
                 </div>
@@ -338,6 +338,10 @@
                     }
                     var currentItem =  jQuery("#carousel").children()[i];
                     jQuery(currentItem).addClass("active");
+                    var video = jQuery(currentItem).find('video')[0];
+                    if(video) {
+                        video.play();
+                    }
                     clearInterval();
                 }, 15000);
             })
