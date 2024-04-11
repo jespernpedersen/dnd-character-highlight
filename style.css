@@ -138,6 +138,11 @@ h1 {
 }
 
 
+.wizard {
+    color: #5881ce;
+    text-shadow: 1px 1px 1px #000;
+}
+
 .barbarian {
     color: #ce7158;
     text-shadow: 1px 1px 1px #000;
