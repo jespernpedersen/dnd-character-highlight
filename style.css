@@ -122,6 +122,22 @@ video {
     text-shadow: 1px 1px 1px #000;
 }
 
+.artificer {
+    color: #dfb16c;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.warlock {
+    color: #ca73ec;
+    text-shadow: 1px 1px 1px #000; 
+}
+
+h1 {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    margin-bottom: 5px;
+}
+
+
 .barbarian {
     color: #ce7158;
     text-shadow: 1px 1px 1px #000;
@@ -140,6 +156,7 @@ video {
 
 h2 {
     font-size: 18px;
+    opacity: 0.5;
 }
 
 .magic-items .magic-item {
