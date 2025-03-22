@@ -64,8 +64,9 @@ body {
 }
 
 .image img {
-    max-width: 101%;
     box-shadow: 10px 10px 1px #000;
+    max-width: 100%;  
+    min-width: 200px;
 }
 
 .character-content {
@@ -132,6 +133,11 @@ video {
     text-shadow: 1px 1px 1px #000; 
 }
 
+.rogue {
+    color: #cf3d3d;
+    text-shadow: 1px 1px 1px #000;  
+}
+
 h1 {
     border-bottom: 2px solid rgba(255, 255, 255, 1);
     margin-bottom: 5px;
@@ -162,6 +168,11 @@ h1 {
 h2 {
     font-size: 18px;
     opacity: 0.5;
+    display: inline-block;
+}
+
+h3 {
+    display: inline-block;
 }
 
 .magic-items .magic-item {
