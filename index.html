@@ -21,7 +21,7 @@
     <div id="carousel">
         <div class="item item-1 active">
             <div class="character-background">
-                <video muted>
+                <video muted loop>
                     <source src="video-background/alistar-forest.mp4">
                 </video>
             </div>
@@ -84,7 +84,7 @@
         
         <div class="item item-2">
             <div class="character-background">
-                <video autoplay muted>
+                <video loop muted>
                         <source src="video-background/tessa-sun.mp4">
                     </video>
             </div>
@@ -146,7 +146,7 @@
         </div>
         <div class="item item-3">
             <div class="character-background">
-                <video autoplay muted>
+                <video loop muted>
                         <source src="video-background/shop.mp4">
                     </video>
             </div>
@@ -205,7 +205,7 @@
         </div>
         <div class="item item-4">
             <div class="character-background">
-                <video autoplay muted>
+                <video loop muted>
                         <source src="video-background/mountain.mp4">
                     </video>
             </div>
@@ -274,22 +274,32 @@
             jQuery(startItem).find('video')[0].play();
 
             setInterval(function() {
+                // Remove the "active" class from all items
                 jQuery(".item").removeClass("active");
+
+                // Pause all videos
+                jQuery("#carousel").find('video').each(function() {
+                    this.pause();
+                });
+
+                // Move to the next item
                 if (i !== (items - 1)) {
                     i++;
                 } else {
                     i = 0;
                 }
+
+                // Add the "active" class to the current item
                 var currentItem = jQuery("#carousel").children()[i];
                 jQuery(currentItem).addClass("active");
+
+                // Play the video in the current active item
                 var video = jQuery(currentItem).find('video')[0];
                 if (video) {
                     video.play();
-                    console.log(video);
                 }
-                clearInterval();
             }, 15000);
-        })
+        });
     </script>
 </body>
 
