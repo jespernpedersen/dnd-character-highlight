@@ -21,7 +21,7 @@
     <div id="carousel">
         <div class="item item-1 active">
             <div class="character-background">
-                <video autoplay muted>
+                <video muted>
                     <source src="video-background/alistar-forest.mp4">
                 </video>
             </div>
@@ -270,6 +270,9 @@
             var items = jQuery("#carousel").children().length;
             var i = 0;
 
+            var startItem = jQuery("#carousel").children()[0];
+            jQuery(startItem).find('video')[0].play();
+
             setInterval(function() {
                 jQuery(".item").removeClass("active");
                 if (i !== (items - 1)) {
@@ -282,6 +285,7 @@
                 var video = jQuery(currentItem).find('video')[0];
                 if (video) {
                     video.play();
+                    console.log(video);
                 }
                 clearInterval();
             }, 15000);
